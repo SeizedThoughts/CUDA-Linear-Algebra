@@ -14,7 +14,7 @@ int cudaReady(){
 __global__ void cudaDotProduct(double *a, double *b, int aY, int aX, int bY, int bX, double *c){
     //perform vector dot product in one thread
     /*
-        aY = bX
+        aX = bY
         __                     __     __                     __     __                                                                                                  __
         | a[1][1] ... a[1][aX]  |     | b[1][1] ... b[1][bX]  |     | a[1][1] * b[1][1] + ... + a[1][aX] * b[1][bX] ... a[1][aX] * b[1][1] + ... + a[aY][aX] * b[1][bX]  |
         |     .  .        .     |     |     .  .        .     |     |                      .                       .                          .                          |
